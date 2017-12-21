@@ -10,7 +10,13 @@ module Negapoji
 
   def self.judge(sentence)
     point = self.pointing(sentence)
-    judge = point>=0 ? "positive" : "negative"
+    if point > 0 then
+      judge = "Positive"
+    elsif point < 0 then
+      judge = "Negative"
+    else 
+      judge = "Neutral"
+    end
   end
 
 end
